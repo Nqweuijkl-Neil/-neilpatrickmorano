@@ -1,0 +1,147 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --white: #ffffff;
+  --white-soft: #fffff6;
+  --white-faded: #ffffff26;
+  --light-blue: #edf2ff;
+  --light-gray-blue: #f0f1f5;
+  --sky-blue: #bfd0f7;
+
+  --bright-purple: #8b3dff;
+  --muted-brown: #394c6026;
+  --gray-brown: #35475a33;
+  --soft-gray: #2b3b4a4d;
+  --deep-navy: #24313d66;
+  --dark-gray: #252627;
+  --deep-black: #1c273080;
+
+  --black-400: #191d26;
+
+  --blue-100: #edf2ff;
+  --blue-600: #2e57c4;
+  --neon-yellow: #d7ff12;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+html {
+  background-color: var(--blue-100);
+}
+
+a {
+  text-decoration: none;
+  color: var(--black-400);
+}
+
+ul > li {
+  list-style: none;
+}
+
+.container {
+  margin: 0 25px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 60px;
+  align-items: center;
+}
+
+.blue {
+  color: var(--blue-600);
+}
+
+.brand {
+  font-weight: bold;
+  color: var(--black-400);
+  padding: 10px;
+  font-size: 1.25rem;
+}
+
+.navigation {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.nav-link {
+  padding: 10px;
+  color: var(--black-400);
+  font-size: 1rem;
+}
+
+.active {
+  font-weight: bold;
+  color: var(--blue-600);
+  position: relative;
+}
+
+.active::after {
+  content: "";
+  width: 80%;
+  height: 2px;
+  background-color: var(--blue-600);
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+}
+
+.mode-circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--blue-600);
+}
+
+.theme-icon {
+  height: 20px;
+}
+
+.theme-icon > .bi-moon-stars-fill {
+  color: white;
+  height: 20px;
+  width: 20px;
+}
+
+/* HERO SECTION */
+
+.hero {
+  position: relative;
+  height: (100%);
+}
+
+.triangle {
+  position: absolute;
+  top: 100px;
+  left: 200px;
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 52px solid var(--blue-600);
+  transform: rotate(140deg);
+}
+
+.triangle::after {
+  content: "";
+  position: absolute;
+  top: -20px; /* Slightly above */
+  left: -30px; /* Center alignment (same as -border-left width) */
+  width: 0;
+  height: 0;
+  border-left: 30px solid transparent;
+  border-right: 30px solid transparent;
+  border-bottom: 52px solid var(--neon-yellow);
+  opacity: 0.5;
+  z-index: 1;
+}
